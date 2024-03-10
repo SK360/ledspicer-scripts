@@ -11,7 +11,7 @@ gameName="${3}"
 romPath=$(basename "${romPath}")
 romName="${romPath%.*}"
 
-if grep -q "\\[$romName\\]" /userdata/system/configs/ledspicer/colors.ini;
+if [[ "$system" == "mame" || "$system" == "fbneo" ]];
 then
     system="arcade";
 fi
